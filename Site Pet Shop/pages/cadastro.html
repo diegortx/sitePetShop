@@ -17,7 +17,9 @@
 		
 	</ul>
 	<div id="circuloTextoCadastro">
-		  <center><h1> Cadastro de Clientes</h1></center> 
+          <center><h1> Cadastro de Clientes</h1></center> 
+           <center><h5>Se é a primeira vez que acessa o sistema cadastre alguem antes de consultar</h5></center>
+          <center> <h3> Para verificar um cadastro coloque o CPF: <input type="number" id="cpfConsulta"> <input type="button" id="btnConsulta" value="Consultar"> </h3><br/></center>
  <center> <h2> Preencha o formulário abaixo </h2><br/></center>
 
 <form>
@@ -31,13 +33,13 @@
     <label for="nome">Nome: </label>
    </td>
    <td align="left">
-    <input type="text" name="email">
+    <input type="text" id="nome">
    </td>
    <td>
     <label for="sobrenome">Sobrenome: </label>
    </td>
    <td align="left">
-    <input type="text" name="sobrenome">
+    <input type="text" id="sobrenome">
    </td>
   </tr>
   <tr>
@@ -45,9 +47,8 @@
     <label>Nascimento: </label>
    </td>
    <td align="left">
-    <input type="text" name="dia" size="2" maxlength="2" value="dd"> 
-   <input type="text" name="mes" size="2" maxlength="2" value="mm"> 
-   <input type="text" name="ano" size="4" maxlength="4" value="aaaa">
+    <input type="text" id="nascimento"  > 
+   
    </td>
   </tr>
   <tr>
@@ -55,7 +56,7 @@
     <label for="rg">RG: </label>
    </td>
    <td align="left">
-    <input type="text" name="rg" size="13" maxlength="13"> 
+    <input type="text" id="rg"  maxlength="13"> 
    </td>
   </tr>
   <tr>
@@ -63,7 +64,7 @@
     <label>CPF:</label>
    </td>
    <td align="left">
-    <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text" name="cpf2" size="2" maxlength="2">
+    <input type="text" id="cpf"  maxlength="12"> 
    </td>
   </tr>
  </table>
@@ -80,13 +81,13 @@
     <label for="rua">Rua:</label>
    </td>
    <td align="left">
-    <input type="text" name="rua">
+    <input type="text" id="rua">
    </td>
    <td>
     <label for="numero">Numero:</label>
    </td>
    <td align="left">
-    <input type="text" name="numero" size="4">
+    <input type="number" id="numero" size="4" value="0">
    </td>
   </tr>
   <tr>
@@ -94,7 +95,7 @@
     <label for="bairro">Bairro: </label>
    </td>
    <td align="left">
-    <input type="text" name="bairro">
+    <input type="text" id="bairro">
    </td>
   </tr>
   <tr>
@@ -102,34 +103,34 @@
     <label for="estado">Estado:</label>
    </td>
    <td align="left">
-    <select name="estado"> 
-    <option value="ac">Acre</option> 
-    <option value="al">Alagoas</option> 
-    <option value="am">Amazonas</option> 
-    <option value="ap">Amapá</option> 
-    <option value="ba">Bahia</option> 
-    <option value="ce">Ceará</option> 
-    <option value="df">Distrito Federal</option> 
-    <option value="es">Espírito Santo</option> 
-    <option value="go">Goiás</option> 
-    <option value="ma">Maranhão</option> 
-    <option value="mt">Mato Grosso</option> 
-    <option value="ms">Mato Grosso do Sul</option> 
-    <option value="mg">Minas Gerais</option> 
-    <option value="pa">Pará</option> 
-    <option value="pb">Paraíba</option> 
-    <option value="pr">Paraná</option> 
-    <option value="pe">Pernambuco</option> 
-    <option value="pi">Piauí</option> 
-    <option value="rj">Rio de Janeiro</option> 
-    <option value="rn">Rio Grande do Norte</option> 
-    <option value="ro">Rondônia</option> 
-    <option value="rs">Rio Grande do Sul</option> 
-    <option value="rr">Roraima</option> 
-    <option value="sc">Santa Catarina</option> 
-    <option value="se">Sergipe</option> 
-    <option value="sp">São Paulo</option> 
-    <option value="to">Tocantins</option> 
+    <select id="estado"> 
+    <option value="AC">Acre</option> 
+    <option value="AL">Alagoas</option> 
+    <option value="AM">Amazonas</option> 
+    <option value="AP">Amapá</option> 
+    <option value="BA">Bahia</option> 
+    <option value="CE">Ceará</option> 
+    <option value="DF">Distrito Federal</option> 
+    <option value="ES">Espírito Santo</option> 
+    <option value="GO">Goiás</option> 
+    <option value="MA">Maranhão</option> 
+    <option value="MT">Mato Grosso</option> 
+    <option value="MS">Mato Grosso do Sul</option> 
+    <option value="MG">Minas Gerais</option> 
+    <option value="PA">Pará</option> 
+    <option value="PB">Paraíba</option> 
+    <option value="PR">Paraná</option> 
+    <option value="PE">Pernambuco</option> 
+    <option value="PI">Piauí</option> 
+    <option value="RJ">Rio de Janeiro</option> 
+    <option value="RN">Rio Grande do Norte</option> 
+    <option value="RO">Rondônia</option> 
+    <option value="RS">Rio Grande do Sul</option> 
+    <option value="RR">Roraima</option> 
+    <option value="SC">Santa Catarina</option> 
+    <option value="SE">Sergipe</option> 
+    <option value="SP">São Paulo</option> 
+    <option value="TO">Tocantins</option> 
    </select>
    </td>
   </tr>
@@ -139,7 +140,7 @@
     <label for="cidade">Cidade: </label>
    </td>
    <td align="left">
-    <input type="text" name="cidade">
+    <input type="text" id="cidade">
    </td>
   </tr>
   <tr>
@@ -147,15 +148,15 @@
     <label for="cep">CEP: </label>
    </td>
    <td align="left">
-    <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+    <input type="text" id="cep" maxlength="8">
    </td>
   </tr>
  </table>
 </fieldset>
 <br />
 <br />
-<input type="button" value="Enviar" id="btnEnviar">
-<input type="reset" value="Limpar">
+<center><input type="button" value="Enviar" id="btnEnviar">
+<input type="reset" value="Limpar"></center>
 </form>
 
 		</div>
