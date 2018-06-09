@@ -19,21 +19,24 @@
 		<center><h1>Agendamento </h1></center>
     Nome: <input type="text" id="name" />
     Telefone: <input type="number" id="telefone" />
-    Data: <input type="date" id="data" />
+    Data: <input type="text" id="data" />
 
     <input type="button" value="Salvar" id="btnAdd" />
+    <br><br><br>
 
-    <table id="tableItems">
+    <div id="divTbl">
+        <table  width="1000px" id="tableItems"  class="comBordaSimples" >
         
-        <tr>
-            <th>Nome</th>
-            <th>Telefone</th>
-            <th>Data</th>
+            <tr>
+                <th width="500px">Nome</th>
+                <th>Telefone</th>
+                <th>Data</th>
 
-            <th>Editar</th>
-            <th>Excluir</th>
-        </tr>
-    </table>
+                <th width="50px">Editar</th>
+                <th width="50px">Excluir</th>
+            </tr>
+        </table>
+    </div>   <br><br><br> 
     <script src="../js/index.js"> </script>
 
 

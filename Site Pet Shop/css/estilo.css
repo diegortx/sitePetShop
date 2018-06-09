@@ -32,7 +32,7 @@ body{
 	height: auto;
 	opacity: 1;
 	background-image: url("../image/fundo.jpg") ;
-	background-repeat: repeat;
+	background-repeat: no-repeat;
 
 	
 	
@@ -97,3 +97,18 @@ background-color: rgba(255,255,255,.6); ;
 
 }
 
+
+
+table.comBordaSimples {
+    border-collapse: collapse; /* CSS2 */
+    background: #FFFFF0;
+}
+ 
+table.comBordaSimples td {
+    border: 1px solid black;
+}
+ 
+table.comBordaSimples th {
+    border: 1px solid black;
+    background: #F0FFF0;
+}

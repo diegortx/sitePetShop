@@ -72,7 +72,8 @@ function consultarCliente(){
     
     var cpfConsulta = document.getElementById("cpfConsulta")
 
-       
+     
+    
     var formSaved = localStorage.getItem("Formulario");
     if(formSaved){
         forms = JSON.parse(formSaved);
