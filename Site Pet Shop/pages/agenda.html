@@ -2,7 +2,8 @@
 <html>
 <head>
 	 <meta charset="utf-8">
-	<title>Clinica Veterinária</title>
+    <title>Clinica Veterinária</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 	<link rel="stylesheet" type="text/css" href="..\css\estilo.css">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">  
@@ -18,32 +19,31 @@
 <center>	<div id="circuloTexto">
 		<center><h1>Agendamento </h1></center>
     Nome: <input type="text" id="name" />
-    Telefone: <input type="number" id="telefone" />
+    Telefone: <input type="text" id="telefone" />
     Data: <input type="text" id="data" />
 
     <input type="button" value="Salvar" id="btnAdd" />
-    <br><br><br>
+    <br>
 
-    <div id="divTbl">
-        <table  width="1000px" id="tableItems"  class="comBordaSimples" >
-        
+    <table  id="tableItems" class="comBordaSimples">
+        <thead>
             <tr>
-                <th width="500px">Nome</th>
-                <th>Telefone</th>
-                <th>Data</th>
-
-                <th width="50px">Editar</th>
-                <th width="50px">Excluir</th>
+            <td width="500px" id="cab">Nome</td>
+            <td width="200px" id="cab">Telefone</td>
+            <td width="200px" id="cab">Data</td>
             </tr>
-        </table>
-    </div>   <br><br><br> 
+        </thead>
+        <tbody>
+
+        </tbody>
+    </div>   
+    <br><br><br> 
     <script src="../js/index.js"> </script>
 
 
 
 		</div></center>
 
-		<center><div id="assinatura">Produzido por Diego H Nogueira 2018 ®</div></center>
 
 
 

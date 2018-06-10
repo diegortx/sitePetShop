@@ -21,7 +21,9 @@ body{
 
 
 }
-
+th{
+	text-align: center
+}
 
 #fundoIndex{
 	
@@ -110,5 +112,13 @@ table.comBordaSimples td {
  
 table.comBordaSimples th {
     border: 1px solid black;
-    background: #F0FFF0;
+    background: rgb(252, 252, 252);
+}
+
+#cab {
+	font-weight: bold;
+}
+
+#tableItems{
+	text-align: center;
 }

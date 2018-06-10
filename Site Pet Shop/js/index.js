@@ -1,6 +1,9 @@
-var editRowIndex = -1;
+/* var editRowIndex = -1;
+var agendas = [];
 
 start();
+
+loadDataFromLocalStorage();
 
 function start() {
     var button = document.getElementById('btnAdd');
@@ -28,6 +31,43 @@ function addContact() {
         editRowIndex = -1;
     } else {
         alert('Preencha todos os campos!');
+    }
+
+
+    var agenda = {
+        nome: inputName.value,
+        telefone: inputTelefone,
+        data: inputData
+    };
+
+    agendas.push(agenda);
+    
+    populatetable();
+    saveLocalStorage();
+}
+
+function populatetable(){
+    var table = document.getElementById("tableItems")
+
+    for(var i=0; i < agendas.length; i++){
+        var agenda = agendas[i]
+        var tr = document.createElement('tr')
+        var tdName = document.createElement('td')
+        var tdTelefone = document.createElement('td')
+        var tdData =document.createElement('td')
+        var tdEdit = document.createElement("td")
+        var tdExcluir = document.createElement("td")
+
+        tdName.innerHTML = agenda.nome;
+        tdTelefone.innerHTML = agenda.telefone;
+        tdData.innerHTML = agenda.data;
+
+        tr.appendChild(tdName);
+        tr.appendChild(tdTelefone);
+        tr.appendChild(tdData);
+
+
+        table.tBodies[0].appendChild(tr);
     }
 }
 
@@ -122,4 +162,104 @@ function updateContact(inputName, inputTelefone, inputData) {
     tr.childNodes[0].innerHTML = inputName.value;
     tr.childNodes[1].innerHTML = inputTelefone.value;
     tr.childNodes[2].innerHTML = inputData.value;
+}
+function saveLocalStorage(){
+    var data = JSON.stringify(agendas)
+    localStorage.setItem("Agenda", data)
+}
+
+function loadDataFromLocalStorage(){
+    var agendaSaved = localStorage.getItem("Agenda")
+    if(agendaSaved){
+        agendas = JSON.parse(agendaSaved)
+        populatetable();
+    }
+}*/
+
+
+var students = [];
+
+saveButtonEvent();
+
+loadDataFromLocalStorage();
+
+function saveButtonEvent(){
+
+    const saveButton = document.getElementById("btnAdd")
+    saveButton.onclick = function (){
+       saveStudent();
+      
+
+    };
+}
+
+function saveStudent(){
+   
+   
+    var inputName = document.getElementById("name");
+    var inputTelefone = document.getElementById("telefone");
+    var inputData = document.getElementById("data");
+
+    var student = {
+        name : inputName.value,
+        telefone : inputTelefone.value,
+        data : inputData.value
+    };
+
+    students.push(student);
+    clearTable();
+    populateTable();
+    saveLocalStorage();
+
+}
+
+
+function populateTable(){
+    var table = document.getElementById("tableItems");
+
+    for(var i=0; i < students.length; i++){
+        var student = students[i];
+       
+        var tr = document.createElement('tr');
+        var tdName = document.createElement("td");
+        var tdTelefone = document.createElement('td');
+        var tdData = document.createElement("td");
+
+
+        tdName.innerHTML = student.name;
+        tdTelefone.innerHTML = student.telefone;
+        tdData.innerHTML = student.data;
+        
+        tr.appendChild(tdName);
+        tr.appendChild(tdTelefone);
+        tr.appendChild(tdData);
+
+        table.tBodies[0].appendChild(tr);
+
+    }
+}
+
+
+function clearTable(){
+    var table = document.getElementById("tableItems");
+    var tBody = table.tBodies[0];
+
+    for(var i = tBody.children.length; i > 0; i--){
+        var tr = tBody.children[i -1];
+        tBody.removeChild(tr)
+    }
+}
+
+function saveLocalStorage(){
+    var data = JSON.stringify(students);
+    localStorage.setItem("estudantes", data);
+}
+
+function loadDataFromLocalStorage(){
+   var studentsSaved = localStorage.getItem("estudantes");
+    if(studentsSaved){
+        students = JSON.parse(studentsSaved);
+        populateTable();
+    }
+
 }
