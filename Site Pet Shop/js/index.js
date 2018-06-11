@@ -1,3 +1,4 @@
+document.getElementById("minhaDiv").style.display = 'none';
 
 var students = [];
 
@@ -32,6 +33,7 @@ function saveStudent(){
     clearTable();
     populateTable();
     saveLocalStorage();
+    alert("Agendado com SUCESSO!\n" + "Para visualizar a agenda clique abaixo.")
 
 }
 
@@ -84,4 +86,13 @@ function loadDataFromLocalStorage(){
         populateTable();
     }
 
+}
+
+
+function Mudarestado(el) {
+    var display = document.getElementById(el).style.display;
+    if(display == "block")
+        document.getElementById(el).style.display = 'none';
+    else
+        document.getElementById(el).style.display = 'block';
 }
