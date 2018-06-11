@@ -2,6 +2,11 @@
 body{
 	font-family: 'Playfair Display', serif;
 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 #assinatura{
 	font-style: italic;
@@ -10,6 +15,8 @@ body{
 #divMenu{
 	text-align: center;
 	text-anchor: middle;
+	display: flex;
+	justify-content: center;
 }
 
 #divForm{
@@ -18,8 +25,10 @@ body{
 	border-radius:10%;
 
 
+}
 
-
+#menuInserir{
+	font-weight: bold;
 }
 th{
 	text-align: center
